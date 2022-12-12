@@ -36,9 +36,8 @@ const CommentSection = ({ postId }) => {
           comment: comment.current.value,
           image: user?.photoURL,
           name:
-            user?.displayName?.split(" ")[0] ||
-            userData?.name?.chartAt(0)?.toUpperCase() +
-              userData?.name?.slice(1),
+            userData?.name?.charAt(0)?.toUpperCase() +
+              userData?.name?.slice(1) || user?.displayName?.split(" ")[0],
           timestamp: serverTimestamp(),
         });
         comment.current.value = "";
