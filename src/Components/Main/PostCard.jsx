@@ -114,7 +114,7 @@ const PostCard = ({ uid, id, logo, name, email, text, image, timestamp }) => {
   return (
     <div className="mb-4">
       <div className="flex flex-col py-4 bg-white rounded-t-3xl">
-        <div className="flex justify-start items-center pb-4 pl-4 w-full">
+        <div className="flex justify-between items-center pb-4 pl-4 w-full">
           <Avatar
             size="sm"
             variant="circular"
