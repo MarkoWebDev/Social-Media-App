@@ -37,7 +37,7 @@ const CommentSection = ({ postId }) => {
           image: user?.photoURL,
           name:
             user?.displayName?.split(" ")[0] ||
-            userData?.name?.chartAt(0)?.tuUpperCase() +
+            userData?.name?.chartAt(0)?.toUpperCase() +
               userData?.name?.slice(1),
           timestamp: serverTimestamp(),
         });
@@ -95,13 +95,13 @@ const CommentSection = ({ postId }) => {
           </form>
         </div>
       </div>
-      {state.comments?.map((comment, index) => {
+      {state?.comments?.map((comment, index) => {
         return (
           <Comment
             key={index}
-            image={comment.image}
-            name={comment.name}
-            comment={comment.comment}
+            image={comment?.image}
+            name={comment?.name}
+            comment={comment?.comment}
           ></Comment>
         );
       })}
