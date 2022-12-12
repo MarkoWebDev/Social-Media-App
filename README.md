@@ -1,1 +1,1 @@
-![image](src/assets/images/media2.PNG)
+![image](src/assets/images/media2.png)
